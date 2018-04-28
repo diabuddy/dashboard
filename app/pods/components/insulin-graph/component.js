@@ -5,6 +5,7 @@ import moment from 'moment';
 
 
 export default Component.extend({
+  tagName: '',
   didInsertElement() {
 
     var scatterChartData = {
@@ -12,39 +13,39 @@ export default Component.extend({
         label: 'Piggy',
         borderColor: faker.commerce.color(),
         data: [{
-          x: 12,
-          y: 23,
+          x: faker.date.between('2018-04-28', '2018-04-29'),
+          y: faker.random.number(4, 5.4)
         }, {
-          x: 23,
-          y: 3,
+          x: faker.date.between('2018-04-28', '2018-04-29'),
+          y: faker.random.number(4, 5.4)
         }, {
-          x: 5,
-          y: 5,
+          x: faker.date.between('2018-04-28', '2018-04-29'),
+          y: faker.random.number(4, 5.4)
         }, {
-          x: 6,
-          y: 67
+          x: faker.date.between('2018-04-28', '2018-04-29'),
+          y: faker.random.number(4, 5.4)
         }]
       }, {
         label: 'Mary',
         borderColor: faker.commerce.color(),
         data: [{
-          x: faker.date.between(),
-          y: 23,
+          x: faker.date.between('2018-04-28', '2018-04-29'),
+          y: faker.random.number(4, 5.4)
         }, {
-          x: faker.date.between(),
-          y: 8,
+          x: faker.date.between('2018-04-28', '2018-04-29'),
+          y: faker.random.number(4, 5.4)
         }, {
-          x: faker.date.between(),
-          y: 2,
+          x: faker.date.between('2018-04-28', '2018-04-29'),
+          y: faker.random.number(4, 5.4)
         }, {
-          x: faker.date.between(),
-          y: 5
+          x: faker.date.between('2018-04-28', '2018-04-29'),
+          y: faker.random.number(4, 5.4)
         }]
       }]
     };
 
     window.onload = function () {
-      var ctx = document.getElementById('insulin-shot-chart').getContext('2d');
+      var ctx = document.getElementById('blood-sugar-plot').getContext('2d');
       window.myScatter = Chart.Scatter(ctx, {
         data: scatterChartData,
         options: {
@@ -52,14 +53,27 @@ export default Component.extend({
             xAxes: [{
               type: 'time',
               time: {
-                unit: 'hour',
+                displayFormats: {
+                  hour: 'h:mm a'
+                }
+              }
+            }],
+            yAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'mg'
+              },
+              ticks: {
+                min: 0,
+                max: 10,
+                stepSize: 1
               }
             }]
           },
           showLines: false,
           title: {
             display: true,
-            text: 'Insulin Shot Chart'
+            text: 'Blood Sugar Chart'
           },
         }
       });
