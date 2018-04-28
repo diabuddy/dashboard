@@ -1,4 +1,40 @@
 <div class='overview'>
   <div class='card card-green'>
+    <div class='header'>
+      Available Buddies
+    </div>
+    <div class='content'>
+      {{#paper-list}}
+        {{#each availableBuddies as |buddy|}}
+          {{#paper-item}}
+            <img src={{item.img}} alt={{item.name}} class="md-avatar">
+            <div class="md-list-item-text">
+              <h3>{{item.name}}</h3>
+              <h4>{{item.email}}</h4>
+              <p>Some longer notes here could be here. But they aren't.</p>
+            </div>
+          {{/paper-item}}
+        {{/each}}
+      {{/paper-list}}
+    </div>
+  </div>
+  <div class='card card-blue'>
+    <div class='header'>
+      Live Location
+    </div>
+    <div class='content'>
+      {{#paper-list}}
+        {{#each availableBuddies as |buddy|}}
+          {{#paper-item}}
+            <img src={{item.img}} alt={{item.name}} class="md-avatar">
+            <div class="md-list-item-text">
+              <h3>{{item.name}}</h3>
+              <h4>{{item.email}}</h4>
+              <p>Some longer notes here could be here. But they aren't.</p>
+            </div>
+          {{/paper-item}}
+        {{/each}}
+      {{/paper-list}}
+    </div>
   </div>
 </div>
