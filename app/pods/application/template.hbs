@@ -29,6 +29,8 @@
             onToggle=(action (mut sidenav))}}
             {{#paper-content padding=true}}
             {{#paper-list}}
+            {{#link-to "overview"}} {{#paper-item}}Overview{{/paper-item}}{{/link-to}}
+            {{#link-to "dashboard"}} {{#paper-item}}Dashboard{{/paper-item}}{{/link-to}}
             {{#paper-item onClick=(action "toggleExpandedItem" "expandBuds")}}Buddies{{/paper-item}}
                 <div class="subitems">
                 {{#liquid-if expandBuds}}
