@@ -2347,7 +2347,7 @@ ember-cli-babel@5.1.6, ember-cli-babel@^5.1.6:
     ember-cli-version-checker "^1.0.2"
     resolve "^1.1.2"
 
-ember-cli-babel@^5.2.4:
+ember-cli-babel@^5.1.5, ember-cli-babel@^5.2.4:
   version "5.2.8"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-5.2.8.tgz#0356b03cc3fdff5d0f2ecaa46a0e1cfaebffd876"
   dependencies:
@@ -2742,6 +2742,12 @@ ember-export-application-global@^2.0.0:
   resolved "https://registry.yarnpkg.com/ember-export-application-global/-/ember-export-application-global-2.0.0.tgz#8d6d7619ac8a1a3f8c43003549eb21ebed685bd2"
   dependencies:
     ember-cli-babel "^6.0.0-beta.7"
+
+ember-firebase@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/ember-firebase/-/ember-firebase-0.0.2.tgz#0a57d404c18b5629e5bcc695c6184c1ceca414a0"
+  dependencies:
+    ember-cli-babel "^5.1.5"
 
 ember-get-config@^0.2.3:
   version "0.2.4"

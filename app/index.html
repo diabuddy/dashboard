@@ -11,7 +11,8 @@
 
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/dashboard.css">
-
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
     {{content-for "head-footer"}}
   </head>
   <body>
@@ -19,6 +20,18 @@
 
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/dashboard.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+      var config = {
+       apiKey: "AIzaSyAHui9RM1KsNPjnO3lqINpX3vufsQYiQL8",
+       authDomain: "diabuddy-80d53.firebaseapp.com",
+       databaseURL: "https://diabuddy-80d53.firebaseio.com",
+       projectId: "diabuddy-80d53",
+       storageBucket: "diabuddy-80d53.appspot.com",
+       messagingSenderId: "867145684082"
+     };
+     firebase.initializeApp(config);
+    </script>
 
     {{content-for "body-footer"}}
   </body>
