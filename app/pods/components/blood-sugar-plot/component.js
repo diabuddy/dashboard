@@ -81,10 +81,10 @@ export default Component.extend({
           }]
         },
         showLines: false,
-        title: {
-          display: true,
-          text: 'Blood Sugar Chart'
-        },
+        // title: {
+        //   display: true,
+        //   text: 'Blood Sugar Chart'
+        // },
       }
     });
   }
