@@ -4,6 +4,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'dashboard',
+    podModulePrefix: 'dashboard/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',
