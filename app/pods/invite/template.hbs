@@ -1,8 +1,13 @@
 <div class='invite'>
   <div class='welcome-message card card-green'>
     <div class='header'>
+      <div class='logo'><img width=24 height=24 src='assets/confetti.png'/></div>
+      <div class='title'>You've been invited to manage {{model.name}}</div>
     </div>
     <div class='body'>
+      {{#paper-button class='sponsor' onClick=(action 'sponsorThisChild' id)}}
+        Accept
+      {{/paper-button}}
     </div>
   </div>
 </div>

@@ -1,6 +1,11 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-  queryParams: ['uniqueIdentifier'],
-  uniqueIdentifier: null
+  queryParams: ['id'],
+  id: null,
+  actions: {
+    sponsorThisChild () {
+      
+    }
+  }
 });
