@@ -51,6 +51,12 @@ html, body {
         background-color:white;
         margin: 1rem;
         padding: 1rem;
+        .md-errors-spacer {
+            min-height: 0px;
+        }
+        md-input-container {
+            margin: 0px;
+        }
     }
 }
 

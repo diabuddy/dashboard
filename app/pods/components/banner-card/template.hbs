@@ -1,3 +1,11 @@
-
-Banner for dashboard
+<div class="layout-row layout-align-space-between-center">
+<span>Diabuddy Dashboard</span>
+{{#paper-select
+  options=ranges
+  selected=selectedRange
+  onChange=(action (mut selectedRange))
+  as |range|}}
+  {{range.label}}
+{{/paper-select}}
+</div>
 {{yield}}
