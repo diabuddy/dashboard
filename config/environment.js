@@ -8,6 +8,14 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyAHui9RM1KsNPjnO3lqINpX3vufsQYiQL8",
+      authDomain: "diabuddy-80d53.firebaseapp.com",
+      databaseURL: "https://diabuddy-80d53.firebaseio.com",
+      projectId: "diabuddy-80d53",
+      storageBucket: "diabuddy-80d53.appspot.com",
+      messagingSenderId: "867145684082"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
