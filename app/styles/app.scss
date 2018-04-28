@@ -45,3 +45,31 @@ html, body {
         padding: 1rem;
     }
 }
+
+.card {
+  flex: 1;
+  position: relative;
+  border-radius: 3px;
+  background: #fff;
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  margin: 10px;
+  &-green {
+    border-top: 3px solid green;
+  }
+  &-blue {
+    border-top: 3px solid blue;
+  }
+  &-grey {
+    border-top: 3px solid #d2d6de;
+  }
+  .header {
+    border-bottom: 1px solid #f4f4f4;
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+    min-height: 30px;
+  }
+}
