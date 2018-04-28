@@ -13,9 +13,5 @@ export default Component.extend({
             label: "1 Week",
             value: 168
         }
-    ],
-    selectedRange: {
-        label: "24 Hours",
-        value: 24
-    }
+    ]
 });
