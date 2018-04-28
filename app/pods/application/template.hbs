@@ -43,8 +43,8 @@
         {{/paper-sidenav}}
 
         {{!-- Content for subroutes --}}
-        <div class={{concat "outlet-content" (if sidenav " sidenav-off" " sidenav-on")}}>
-            {{liquid-outlet}}
+        <div class={{concat "outlet-content layout-fill layout-column layout-align-start-center" (if sidenav " sidenav-off" " sidenav-on")}}>
+            {{liquid-outlet class="layout-fill"}}
         </div>
     {{/paper-sidenav-container}}
 {{else}}
