@@ -10,6 +10,11 @@ html, body {
 .bs {
     box-shadow: 0 10px 6px -6px #777;
 }
+
+.bs:hover {
+    box-shadow: 0 12px 6px -6px #777;
+}
+
 .subitems {
     margin-left: 2rem;
 }
@@ -32,7 +37,8 @@ html, body {
         width: 99%;
     }
     .outlet-content {
-      background: #f4f5f7
+        width: 100%;
+        background: #f4f5f7
     }
 }
 
@@ -42,7 +48,7 @@ html, body {
     .banner {
         border-radius: 0.5rem;
         width: 97%;
-        background-color: whitesmoke;
+        background-color:white;
         margin: 1rem;
         padding: 1rem;
     }
