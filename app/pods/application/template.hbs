@@ -1,7 +1,7 @@
-{{#if loggedIn}}
+{{#if session.currentUser}}
     {{#paper-toolbar}}
     {{#paper-toolbar-tools}}
-        {{#paper-button 
+        {{#paper-button
             onClick=(action 'toggleSidenav')
             iconButton=true}}
         {{paper-icon "menu"}}
@@ -31,15 +31,13 @@
 
         {{#paper-card-content class="flex"}}
             <div class="sidenav layout-fill layout-align-start-center layout-column">
-            
 
-            
             </div>
         {{/paper-card-content}}
         {{outlet}}
     {{/paper-sidenav-container}}
-    
+
 {{else}}
+
     {{outlet}}
 {{/if}}
-
