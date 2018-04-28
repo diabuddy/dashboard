@@ -11,6 +11,7 @@ Router.map(function () {
   this.route('overview');
   this.route('login');
   this.route('test');
+  this.route('insulin-shot-plot');
 });
 
 export default Router;

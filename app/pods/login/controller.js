@@ -3,7 +3,7 @@ import { inject } from '@ember/service';
 
 export default Controller.extend({
   actions: {
-    onSuccess () {
+    onSuccess() {
       this.transitionToRoute('overview');
     }
   }
