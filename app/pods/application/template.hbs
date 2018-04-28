@@ -1,4 +1,5 @@
 {{#if loggedIn}}
+    {{!-- Top nav --}}
     {{#paper-toolbar}}
     {{#paper-toolbar-tools}}
         {{#paper-button 
@@ -18,6 +19,9 @@
         {{/paper-button}}
     {{/paper-toolbar-tools}}
     {{/paper-toolbar}}
+
+
+    {{!-- All sidenav --}}
     {{#paper-sidenav-container class="sidenav"}}
         {{#paper-sidenav
             class="md-whiteframe-z2"
@@ -25,11 +29,22 @@
             lockedOpen=lockedSidenav
             onToggle=(action (mut sidenav))}}
             {{#paper-content padding=true}}
-            Sidenace Option
+            {{#paper-list}}
+            {{#paper-item onClick=(action "toggleExpandedItem" "expandBuds")}}Buddies{{/paper-item}}
+                <div class="subitems">
+                {{#liquid-if expandBuds}}
+                    {{#each buddies as |buddy|}}
+                        {{#paper-item onClick=(action 'selectedBuddies' buddy.uid)}}{{buddy.name}}{{/paper-item}}
+                    {{/each}}
+                {{/liquid-if}}
+                </div>
+            {{/paper-list}}
             {{/paper-content}}
         {{/paper-sidenav}}
-        <div class={{concat "dashboard-content" (if sidenav " sidenav-on" " sidenav-off")}}>
-        {{outlet}}    
+
+        {{!-- Content for subroutes --}}
+        <div class={{concat "outlet-content" (if sidenav " sidenav-off" " sidenav-on")}}>
+            {{outlet}}
         </div>
     {{/paper-sidenav-container}}
 {{else}}
