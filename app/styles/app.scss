@@ -1,11 +1,12 @@
 @import 'ember-paper';
 @import 'login';
+@import 'overview';
 
 html, body {
     height: 100%;
     min-height: 100%;
   }
-  
+
 .bs {
     box-shadow: 0 10px 6px -6px #777;
 }
@@ -29,7 +30,7 @@ html, body {
         width: 99%;
     }
     .outlet-content {
-    
+
     }
 }
 
@@ -44,4 +45,3 @@ html, body {
         padding: 1rem;
     }
 }
-
