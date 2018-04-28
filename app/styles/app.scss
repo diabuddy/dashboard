@@ -6,22 +6,28 @@ html, body {
     min-height: 100%;
   }
   
+.bs {
+    box-shadow: 0 10px 6px -6px #777;
+}
+.subitems {
+    margin-left: 2rem;
+}
 .sidenav {
     height: calc(100VH - 64px);
 }
-
-
-.dashboard-content {
-    .sidenav-on {
-        width: 75%;
-    }
-    .sidenav-off {
-        width: 100%;
-    }
+.sidenav-on {
+    width: 77%;
+}
+.sidenav-off {
+    width: 99%;
+}
+.outlet-content {
+    
 }
 .banner {
     border-radius: 0.5rem;
     width: 100%;
-    background-color: black;
+    background-color: whitesmoke;
     margin: 1rem;
+    padding: 1rem;
 }
