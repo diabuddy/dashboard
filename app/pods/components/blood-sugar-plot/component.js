@@ -56,6 +56,9 @@ export default Component.extend({
       options: {
         scales: {
           xAxes: [{
+            ticks: {
+              minRotation: 45,
+            },
             type: 'time',
             time: {
               min: moment().hours(11).minutes(0).seconds(0),
