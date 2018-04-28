@@ -43,9 +43,7 @@ export default Controller.extend({
                     break;
                 }
             }
-            console.log(buddies)
             this.set('buddies', buddies)
-            console.log(this.get('buddies'))
         }
     }
 });

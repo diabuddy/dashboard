@@ -1,3 +1,4 @@
+<div id="application">
 {{#if session.currentUser}}
     {{#paper-toolbar}}
     {{#paper-toolbar-tools}}
@@ -33,11 +34,11 @@
             {{#link-to "dashboard"}} {{#paper-item}}Dashboard{{/paper-item}}{{/link-to}}
             {{#paper-item onClick=(action "toggleExpandedItem" "expandBuds")}}Buddies{{/paper-item}}
                 <div class="subitems">
-                {{#liquid-if expandBuds}}
+                {{#if expandBuds}}
                     {{#each buddies as |buddy|}}
-                        {{#paper-item onClick=(action 'selectedBuddies' buddy.uid)}}{{buddy.name}}{{/paper-item}}
+                        {{#link-to buddy.uid}}{{#paper-item onClick=(action 'selectedBuddies' buddy.uid)}}{{buddy.name}}{{/paper-item}}{{/link-to}}
                     {{/each}}
-                {{/liquid-if}}
+                {{/if}}
                 </div>
             {{/paper-list}}
             {{/paper-content}}
@@ -51,3 +52,4 @@
 {{else}}
     {{outlet}}
 {{/if}}
+</div>

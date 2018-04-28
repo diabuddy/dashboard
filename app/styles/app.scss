@@ -12,22 +12,36 @@ html, body {
 .subitems {
     margin-left: 2rem;
 }
-.sidenav {
-    height: calc(100VH - 64px);
-}
-.sidenav-on {
-    width: 77%;
-}
-.sidenav-off {
-    width: 99%;
-}
-.outlet-content {
+
+
+
+
+
+//Application CSS
+#application {
+    .sidenav {
+        height: calc(100VH - 64px);
+    }
+    .sidenav-on {
+        width: 77%;
+    }
+    .sidenav-off {
+        width: 99%;
+    }
+    .outlet-content {
     
+    }
 }
-.banner {
-    border-radius: 0.5rem;
-    width: 100%;
-    background-color: whitesmoke;
-    margin: 1rem;
-    padding: 1rem;
+
+
+//Dashboard CSS
+#dashboard {
+    .banner {
+        border-radius: 0.5rem;
+        width: 100%;
+        background-color: whitesmoke;
+        margin: 1rem;
+        padding: 1rem;
+    }
 }
+
