@@ -7,7 +7,8 @@ export default Route.extend({
       if (this.get('router.currentRouteName') === 'login') {
         this.transitionTo('overview')
       }
-      return;
+    } else {
+      this.transitionTo('login');
     }
   }
 });
