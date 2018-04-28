@@ -1,11 +1,13 @@
 <div id="application">
 {{#paper-toolbar}}
 {{#paper-toolbar-tools}}
-    {{#paper-button
+    {{#if session.currentUser}}
+      {{#paper-button
         onClick=(action 'toggleSidenav')
         iconButton=true}}
-    {{paper-icon "menu"}}
-    {{/paper-button}}
+        {{paper-icon "menu"}}
+        {{/paper-button}}
+    {{/if}}
     <h2>
     Diabuddy
     </h2>

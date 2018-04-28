@@ -3,8 +3,14 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  background: #f4f5f7;
+
   .login-form {
     flex: 1;
+    margin-top: 50px;
+
+    .firebaseui-card-content {
+      min-height: 100px;
+    }
   }
 }

@@ -1,10 +1,10 @@
 @import 'ember-paper';
 @import 'login';
 @import 'overview';
-
+@import 'invite';
 @import 'components/map-element';
 
-html, body {
+html, body, body > .ember-view, #application {
   height: 100%;
   min-height: 100%;
 }

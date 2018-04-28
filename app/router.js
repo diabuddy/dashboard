@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('login');
   this.route('test');
   this.route('insulin-shot-plot');
+  this.route('invite');
 });
 
 export default Router;
