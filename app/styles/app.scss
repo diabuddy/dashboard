@@ -6,3 +6,6 @@ html, body {
     min-height: 100%;
   }
   
+.sidenav {
+    height: calc(100VH - 64px);
+}
