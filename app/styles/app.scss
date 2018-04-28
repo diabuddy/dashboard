@@ -30,6 +30,10 @@ html, body, body > .ember-view, #application {
 
 //Application CSS
 #application {
+    .navicon {
+        height: 50px;
+        padding-right: 10px;
+    }
     .md-sidenav-left {
         min-width: 15VW;
     }
