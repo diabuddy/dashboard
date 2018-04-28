@@ -1,0 +1,14 @@
+<div class='map-element card card-blue'>
+  <div class='header'>
+    Live Location
+  </div>
+  <div class='content'>
+    {{#mapbox-map mapId='ember-cli-mapbox.7c3914f2' divId='mapbox'}}
+      {{#mapbox-markercluster map=map as |cluster|}}
+      {{#each content as |position|}}
+        {{mapbox-marker map=map cluster=cluster coordinates=position.coordinates}}
+      {{/each}}
+      {{/mapbox-markercluster}}
+    {{/mapbox-map}}
+  </div>
+</div>

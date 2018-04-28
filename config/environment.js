@@ -16,6 +16,9 @@ module.exports = function(environment) {
       storageBucket: "diabuddy-80d53.appspot.com",
       messagingSenderId: "867145684082"
     },
+    mapbox: {
+      accessToken: 'pk.eyJ1Ijoic3Jvd2hhbmkiLCJhIjoiY2plbmNqMjdzMHd3MTJxcGl5dWY2bXZseiJ9.nbkuawnxrUglF-qbzW-kYQ'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
