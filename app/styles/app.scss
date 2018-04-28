@@ -29,25 +29,32 @@ html, body {
 
 //Application CSS
 #application {
+    .md-sidenav-left {
+        min-width: 15VW;
+    }
     .sidenav {
         height: calc(100VH - 64px);
+        min-width: 30VW;
     }
     .sidenav-on {
-        width: 77%;
+        width: calc(100% - 15VW);
     }
     .sidenav-off {
-        width: 99.5%;
+        width: 100%;
     }
     .outlet-content {
-        width: 100%;
-        background: #f4f5f7
+        background: #f4f5f7;
+        
     }
 }
 
 
 //Dashboard CSS
 #dashboard {
-    width: 98.5%;
+    padding: 2rem;
+    width: 100%;
+    height: 100VH;
+    overflow-y: scroll;
     .banner {
         border-radius: 0.5rem;
         background-color:white;
@@ -63,6 +70,16 @@ html, body {
     .charts {
         margin-left: 0.2rem;
     }
+    .layout-row {
+        .chart {
+            width: 50%;
+        }
+    }
+    .content {
+    }
+}
+#insulin-shot-plot {
+    width: 50VW;
 }
 
 .card {
