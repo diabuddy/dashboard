@@ -91,10 +91,10 @@ export default Component.extend({
           }]
         },
         showLines: false,
-        title: {
-          display: true,
-          text: 'Insulin Shot Plot'
-        },
+        // title: {
+        //   display: true,
+        //   text: 'Insulin Shot Plot'
+        // },
       }
     });
   }
