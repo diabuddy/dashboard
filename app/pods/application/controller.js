@@ -1,5 +1,7 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-    loggedIn: true
+    loggedIn: true,
+    sidenav: false,
+    lockedSidenav: true
 });
