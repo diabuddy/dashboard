@@ -1,11 +1,13 @@
 {{#if loggedIn}}
     {{#paper-toolbar}}
     {{#paper-toolbar-tools}}
-        {{#paper-button iconButton=true}}
+        {{#paper-button 
+            onClick=(action 'toggleSidenav')
+            iconButton=true}}
         {{paper-icon "menu"}}
         {{/paper-button}}
         <h2>
-        Toolbar with Icon Buttons
+        Diabuddy
         </h2>
         <span class="flex"></span>
         {{#paper-button iconButton=true}}
@@ -19,20 +21,16 @@
     {{#paper-sidenav-container class="inner-sidenav"}}
         {{#paper-sidenav
             class="md-whiteframe-z2"
-            name="left2"
-            open=sidenav
+            name="sidenav"
             lockedOpen=lockedSidenav
             onToggle=(action (mut sidenav))}}
-            {{#paper-toolbar as |toolbar|}}
-            {{#paper-toolbar-tools}}Left Sidenav{{/paper-toolbar-tools}}
-            {{/paper-toolbar}}
             {{#paper-content padding=true}}
-            Çup?
+            Sidenace Option
             {{/paper-content}}
         {{/paper-sidenav}}
 
         {{#paper-card-content class="flex"}}
-            <div class="layout-fill layout-align-start-center layout-column" style="height: 500px">
+            <div class="sidenav layout-fill layout-align-start-center layout-column">
             
 
             
@@ -42,6 +40,6 @@
     {{/paper-sidenav-container}}
     
 {{else}}
-
+    {{outlet}}
 {{/if}}
 
