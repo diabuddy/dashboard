@@ -5,13 +5,12 @@
     </div>
     <div class='content'>
       {{#paper-list}}
-        {{#each availableBuddies as |buddy|}}
-          {{#paper-item}}
-            <img src={{item.img}} alt={{item.name}} class="md-avatar">
-            <div class="md-list-item-text">
-              <h3>{{item.name}}</h3>
-              <h4>{{item.email}}</h4>
-              <p>Some longer notes here could be here. But they aren't.</p>
+        {{#each userListItems as |buddy|}}
+          {{#paper-item class='item'}}
+            <img src={{buddy.profile_img}} alt={{buddy.name}} class="md-avatar">
+            <div class="md-list-item">
+              <div class='primary'>{{buddy.name}}</div>
+              <div class='secondary'>{{buddy.email}}</div>
             </div>
           {{/paper-item}}
         {{/each}}
