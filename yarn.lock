@@ -2385,6 +2385,13 @@ ember-cli-broccoli-sane-watcher@^2.0.4:
     rsvp "^3.0.18"
     sane "^2.4.1"
 
+ember-cli-chartjs@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/ember-cli-chartjs/-/ember-cli-chartjs-2.5.0.tgz#571c75cb64e2a2d86e6a9a400ce7ff595629d345"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+    ember-cli-htmlbars "^2.0.1"
+
 ember-cli-dependency-checker@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ember-cli-dependency-checker/-/ember-cli-dependency-checker-2.1.0.tgz#9d66286a7c778e94733eaf21320d129c4fd0dd64"
