@@ -31,6 +31,10 @@ html, body {
 #application {
     .sidenav {
         height: calc(100VH - 64px);
+        .user-info {
+          border-bottom: 1px solid rgba(0,0,0,.05);
+          font-weight: 200;
+        }
     }
     .sidenav-on {
         width: 77%;

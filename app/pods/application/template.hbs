@@ -28,6 +28,10 @@
             onToggle=(action (mut sidenav))}}
             {{#paper-content padding=true}}
             {{#paper-list}}
+            {{#paper-item class='user-info'}}
+              <img class='md-avatar' src="assets/avatar.png"/>
+              {{session.currentUser.displayName}}
+            {{/paper-item}}
             {{#link-to "overview"}} {{#paper-item}}Overview{{/paper-item}}{{/link-to}}
             {{#link-to "dashboard"}} {{#paper-item}}Dashboard{{/paper-item}}{{/link-to}}
             {{#paper-item onClick=(action "toggleExpandedItem" "expandBuds")}}Buddies{{/paper-item}}
