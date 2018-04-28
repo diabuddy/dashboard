@@ -1,7 +1,9 @@
 import Controller from '@ember/controller';
+import { inject } from '@ember/service';
 
 export default Controller.extend({
     loggedIn: true,
+    session: inject(),
     sidenav: false,
     lockedSidenav: true,
     expandBuds: false,

@@ -1,7 +1,0 @@
-{
-  "name": "dashboard",
-  "dependencies": {
-    "chartjs": "2.1.6",
-    "firebase": "^4.12.0"
-  }
-}
