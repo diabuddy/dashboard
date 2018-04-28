@@ -9,3 +9,19 @@ html, body {
 .sidenav {
     height: calc(100VH - 64px);
 }
+
+
+.dashboard-content {
+    .sidenav-on {
+        width: 75%;
+    }
+    .sidenav-off {
+        width: 100%;
+    }
+}
+.banner {
+    border-radius: 0.5rem;
+    width: 100%;
+    background-color: black;
+    margin: 1rem;
+}

@@ -18,7 +18,7 @@
         {{/paper-button}}
     {{/paper-toolbar-tools}}
     {{/paper-toolbar}}
-    {{#paper-sidenav-container class="inner-sidenav"}}
+    {{#paper-sidenav-container class="sidenav"}}
         {{#paper-sidenav
             class="md-whiteframe-z2"
             name="sidenav"
@@ -28,17 +28,10 @@
             Sidenace Option
             {{/paper-content}}
         {{/paper-sidenav}}
-
-        {{#paper-card-content class="flex"}}
-            <div class="sidenav layout-fill layout-align-start-center layout-column">
-            
-
-            
-            </div>
-        {{/paper-card-content}}
-        {{outlet}}
+        <div class={{concat "dashboard-content" (if sidenav " sidenav-on" " sidenav-off")}}>
+        {{outlet}}    
+        </div>
     {{/paper-sidenav-container}}
-    
 {{else}}
     {{outlet}}
 {{/if}}
