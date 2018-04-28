@@ -10,12 +10,21 @@
     Diabuddy
     </h2>
     <span class="flex"></span>
-    {{#paper-button iconButton=true}}
-    {{paper-icon "favorite"}}
-    {{/paper-button}}
-    {{#paper-button iconButton=true}}
-    {{paper-icon "more_vert"}}
-    {{/paper-button}}
+    {{#paper-menu as |menu|}}
+  {{#menu.trigger}}
+  {{#paper-button iconButton=true}}
+  {{paper-icon "more_vert"}}
+  {{/paper-button}}
+  {{/menu.trigger}}
+  {{#menu.content width=4 as |content|}}
+    {{#each items as |item|}}
+      {{#content.menu-item onClick=(action item.action item)}}
+        {{paper-icon item.icon}}
+        <span>{{item.title}}</span>
+      {{/content.menu-item}}
+    {{/each}}
+  {{/menu.content}}
+{{/paper-menu}}
 {{/paper-toolbar-tools}}
 {{/paper-toolbar}}
 {{#if session.currentUser}}
@@ -28,6 +37,10 @@
             onToggle=(action (mut sidenav))}}
             {{#paper-content padding=true}}
             {{#paper-list}}
+            {{#paper-item class='user-info'}}
+              <img class='md-avatar' src="assets/avatar.png"/>
+              {{session.currentUser.displayName}}
+            {{/paper-item}}
             {{#link-to "overview"}} {{#paper-item}}Overview{{/paper-item}}{{/link-to}}
             {{#link-to "dashboard"}} {{#paper-item}}Dashboard{{/paper-item}}{{/link-to}}
             {{#paper-item onClick=(action "toggleExpandedItem" "expandBuds")}}Buddies{{/paper-item}}
