@@ -30,5 +30,28 @@
       position: relative;
       min-height: 30px;
     }
+    .content {
+      max-height: 400px;
+      overflow-y: scroll;
+      md-list {
+        .item {
+          transition: background 0.2s ease;
+          background: initial;
+          cursor: pointer;
+          &:hover {
+            background: #dcddde;
+          }
+          .md-list-item {
+            .primary {
+              font-size: 16px;
+            }
+            .secondary {
+              font-size: 12px;
+              color: lighten(black, 0.3);
+            }
+          }
+        }
+      }
+    }
   }
 }
