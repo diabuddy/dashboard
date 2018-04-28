@@ -4,7 +4,7 @@ import { computed } from '@ember/object';
 export default Service.extend({
   currentUser: null,
   init () {
-    this.set('currentUser', JSON.parse(localStorage.currentUser || "{}"));
+    this.set('currentUser', JSON.parse(localStorage.currentUser || null));
   },
   attemptAuthenticate (callback = () => {}) {
     const ui = new firebaseui.auth.AuthUI(firebase.auth());
@@ -22,5 +22,10 @@ export default Service.extend({
       }
       // Other config options...
     });
+  },
+  logout () {
+    firebase.auth().signOut();
+    delete localStorage.currentUser;
+    window.location.reload();
   }
 });

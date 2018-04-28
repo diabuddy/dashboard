@@ -7,17 +7,24 @@ export default Controller.extend({
     sidenav: false,
     lockedSidenav: true,
     expandBuds: false,
+    items: [
+      {
+        title: 'Logout',
+        action: 'logout',
+        icon: 'exit to app'
+      }
+    ],
     buddies: [
-        { 
+        {
             name: "Steve",
             uid:"1"
 
         },
-        { 
+        {
             name: "Mary",
             uid:"2"
         },
-        { 
+        {
             name: "Calvin",
             uid:"3"
         },
@@ -44,6 +51,9 @@ export default Controller.extend({
                 }
             }
             this.set('buddies', buddies)
+        },
+        logout () {
+          this.get('session').logout()
         }
     }
 });
