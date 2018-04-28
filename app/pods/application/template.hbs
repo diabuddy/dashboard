@@ -1,11 +1,13 @@
 {{#if loggedIn}}
     {{#paper-toolbar}}
     {{#paper-toolbar-tools}}
-        {{#paper-button iconButton=true}}
+        {{#paper-button 
+            onClick=(action 'toggleSidenav')
+            iconButton=true}}
         {{paper-icon "menu"}}
         {{/paper-button}}
         <h2>
-        Toolbar with Icon Buttons
+        Diabuddy
         </h2>
         <span class="flex"></span>
         {{#paper-button iconButton=true}}
@@ -19,8 +21,7 @@
     {{#paper-sidenav-container class="inner-sidenav"}}
         {{#paper-sidenav
             class="md-whiteframe-z2"
-            name="left2"
-            open=sidenav
+            name="sidenav"
             lockedOpen=lockedSidenav
             onToggle=(action (mut sidenav))}}
             {{#paper-content padding=true}}
