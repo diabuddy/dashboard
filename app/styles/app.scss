@@ -8,11 +8,11 @@ html, body {
   }
 
 .bs {
-    box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
 
 .bs:hover {
-    box-shadow: 0 12px 6px -6px #777;
+    box-shadow: 0 3px 3px rgba(0,0,0,.05);
 }
 
 .subitems {
@@ -34,7 +34,7 @@ html, body {
         width: 77%;
     }
     .sidenav-off {
-        width: 99%;
+        width: 99.5%;
     }
     .outlet-content {
         width: 100%;
@@ -47,10 +47,16 @@ html, body {
 #dashboard {
     .banner {
         border-radius: 0.5rem;
-        width: 97%;
+        width: 98.5%;
         background-color:white;
         margin: 1rem;
         padding: 1rem;
+        .md-errors-spacer {
+            min-height: 0px;
+        }
+        md-input-container {
+            margin: 0px;
+        }
     }
 }
 
