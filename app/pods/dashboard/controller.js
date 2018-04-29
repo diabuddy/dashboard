@@ -31,6 +31,7 @@ export default Controller.extend({
             }
         }
     }
+    events.sort(function(a,b) {return (a.date < b.date) ? 1 : ((b.date < a.date) ? -1 : 0);} );
     console.log(events)
     return events
   }),
