@@ -44,14 +44,16 @@
             {{/paper-item}}
             {{#link-to "overview"}} {{#paper-item}}Overview{{/paper-item}}{{/link-to}}
             {{#link-to "dashboard"}} {{#paper-item}}Dashboard{{/paper-item}}{{/link-to}}
-            {{#paper-item onClick=(action "toggleExpandedItem" "expandBuds")}}Buddies{{/paper-item}}
+            {{!-- {{#paper-item onClick=(action "toggleExpandedItem" "expandBuds")}}Buddies{{/paper-item}}
                 <div class="subitems">
                 {{#if expandBuds}}
                     {{#each buddies as |buddy|}}
                         {{#link-to buddy.uid}}{{#paper-item onClick=(action 'selectedBuddies' buddy.uid)}}{{buddy.name}}{{/paper-item}}{{/link-to}}
                     {{/each}}
                 {{/if}}
-                </div>
+                </div> --}}
+            {{#paper-item target="_blank" href='https://github.com/diabuddy/dashboard'}}Github{{/paper-item}}
+            {{#paper-item onClick=(action 'toggleAboutUs')}}About Us{{/paper-item}}
             {{/paper-list}}
             {{/paper-content}}
         {{/paper-sidenav}}
@@ -65,3 +67,37 @@
     {{outlet}}
 {{/if}}
 </div>
+
+{{#if aboutModal}}
+  {{#paper-dialog class="flex-77"  clickOutsideToClose=true}}
+    {{#paper-toolbar}}
+      {{#paper-toolbar-tools}}
+        <h2>About the Dev Team</h2>
+        <span class="flex"></span>
+        {{#paper-button onClick=(action 'toggleAboutUs') iconButton=true }}{{paper-icon icon="close"}}{{/paper-button}}
+      {{/paper-toolbar-tools}}
+    {{/paper-toolbar}}
+
+    {{#paper-dialog-content}}
+        <div class="layout">
+        {{#each team as |dev|}}
+        <div class="layout-column layout-align-center-center">
+        <div class="bs profile-photo">
+            <img alt={{dev.name}} src={{concat "/assets/" dev.photo}}/>
+        </div>
+        <h4>{{dev.name}}</h4>
+        <h5>{{dev.role}}</h5>
+        </div>
+        {{/each}}
+        </div>
+        <p class="description">
+          This project was concieved, designed, and implemented at the `HackingHealth Hackathon`. After an intense 36 hours of work we are left with a surprisingly polished and functional iOS and web app. If you have any questions feel free to reach out to us on our linkedIn or through the emails on github. 
+        </p>
+    {{/paper-dialog-content}}
+
+    {{#paper-dialog-actions class="layout-row"}}
+      {{!-- {{#paper-button href="http://en.wikipedia.org/wiki/Mango" target="_blank"}}More on Wikipedia{{/paper-button}} --}}
+      <span class="flex"></span>
+    {{/paper-dialog-actions}}
+  {{/paper-dialog}}
+{{/if}}
