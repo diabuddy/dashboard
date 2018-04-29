@@ -10,6 +10,8 @@
     border-radius: 3px;
     background: #fff;
     margin-bottom: 20px;
+    min-height: 400px;
+    max-height: 400px;
     width: 100%;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
     margin: 10px;
@@ -28,10 +30,9 @@
       display: block;
       padding: 10px;
       position: relative;
-      min-height: 30px;
+      min-height: 50px;
     }
     .content {
-      max-height: 400px;
       overflow-y: scroll;
       md-list {
         .item {
