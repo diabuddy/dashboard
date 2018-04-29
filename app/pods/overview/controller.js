@@ -2,8 +2,6 @@ import Controller from '@ember/controller';
 
 import { observer } from '@ember/object';
 
-import faker from 'faker';
-
 export default Controller.extend({
   computeModel: observer('model', function () {
     const model = this.get('model');
