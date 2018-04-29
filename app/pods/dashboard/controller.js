@@ -7,6 +7,33 @@ export default Controller.extend({
     value: 24
   },
   mockUsers: ['3Nwq2LuIs9QaVxzEo57szgBC7ME2', '68NeeBd25GZ580xH4ZSFc415UWk2', 'E4HHocNr7yTwBBbPpdOWX6YyVH12'],
+  userActivity: computed( 'model', function() {
+    const model = this.get('model');
+    const buddies = this.get('mockUsers')
+    let data = []
+    for (let id of buddies) {
+      data.push(Object.assign({ id }, model[id]))
+    }
+    let events = []
+    for(let person of data){
+        if(person != undefined){
+            for (let day in person.history){
+                for (let event in person.history[day]){
+                    events.push(
+                        {
+                            name: person.name,
+                            type: person.history[day][event].eventType,
+                            date: day,
+                            time: Math.floor(person.history[day][event].timestamp/60)
+                        }
+                    )
+                }
+            }
+        }
+    }
+    console.log(events)
+    return events
+  }),
   userScores: computed( 'model', function() {
     const model = this.get('model');
     const buddies = this.get('mockUsers')

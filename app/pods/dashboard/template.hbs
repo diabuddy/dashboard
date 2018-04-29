@@ -1,17 +1,5 @@
 <div id='dashboard' class="toLeft">
   {{banner-card selectedRange=selectedRange selectedBuddies=selectedBuddies class='card banner bs'}} 
-  <div class="charts layout-row">
-    {{#each userScores as |user|}}
-    <div class='card card-blue chart'>
-      <div class='header'>
-        {{user.name}}'s Progress
-      </div>
-      <div class='content'>
-        {{score-progress data=user}}
-      </div>
-    </div>
-    {{/each}}
-  </div>
   {{!-- This is where our data cards go --}}
   <div class="charts layout-row">
     <div class='card card-blue chart'>
@@ -28,6 +16,24 @@
       </div>
       <div class='content'>
         {{blood-sugar-plot class='dashboard-card' bloodSugar=glucoseUpdate}}
+      </div>
+    </div>
+  </div>
+  <div class="charts layout-row">
+    <div class='card card-blue chart'>
+      <div class='header'>
+        Daily Score Progress
+      </div>
+      <div class='content layout-align-center-center'>
+        {{score-progress data=userScores}}
+      </div>
+    </div>
+    <div class='card card-green chart flex-70'>
+      <div class='header'>
+        Activity Feed
+      </div>
+      <div class='content'>
+        {{activity-list data=userActivity}}
       </div>
     </div>
   </div>
