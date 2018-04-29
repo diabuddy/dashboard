@@ -55,6 +55,15 @@ html, body, body > .ember-view, #application {
 
 //Application CSS
 #application {
+    .chip {
+        border-radius: .75em;
+        display: inline-block;
+        font-size: 11px;
+        line-height: 1em;
+        padding: .25em .75em;
+        margin-left: 1rem;
+        background-color: lightblue;
+    }
     .navlogo {
       transform: translateY(2px);
     }
