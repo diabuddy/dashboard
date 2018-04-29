@@ -1,6 +1,7 @@
 import Controller from '@ember/controller';
 
 import { inject } from '@ember/service';
+import sweetAlert from 'ember-sweetalert';
 
 export default Controller.extend({
   session: inject(),
@@ -9,8 +10,21 @@ export default Controller.extend({
   actions: {
     sponsorThisChild (id, child) {
       const currentUser = firebase.auth().currentUser;
-      if (firebase.auth().currentUser) {
-        // firebase.database().ref('guardians/')
+      if (currentUser) {
+        const query = `guardians/${btoa(currentUser.email)}/children/${id}`
+        firebase.database().ref(query).set({
+          id,
+          name: child.name,
+          email: child.email
+        });
+        sweetAlert({
+          title: 'Success!',
+          type: 'success',
+          confirmButtonText: 'Continue',
+          allowOutsideClick: false
+        }).then((confirm)=> {
+          this.transitionToRoute('overview')
+        }).catch(() => {});
       }
     },
     declineThisChild () {

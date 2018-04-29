@@ -17,7 +17,7 @@ export default Service.extend({
         signInSuccess: (currentUser, credential, redirectUrl) => {
           const serializedUserQuery = `guardians/${btoa(currentUser.email)}`;
           firebase.database().ref(serializedUserQuery).once('value')
-            .then(val => val.val())
+            .then(snap => snap.val())
             .then(response => {
               if (response === null) {
                 firebase.database().ref(serializedUserQuery).set({
