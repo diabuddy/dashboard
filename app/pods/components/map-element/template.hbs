@@ -3,12 +3,27 @@
     Live Location
   </div>
   <div class='content'>
-    {{#mapbox-map mapId='ember-cli-mapbox.7c3914f2' divId='mapbox'}}
-      {{#mapbox-markercluster map=map as |cluster|}}
+    {{#if _shouldRenderMap}}
+      {{#mapbox-map
+        recenter=true
+        center=content.[0].geo
+        coordinates=null
+        zoom=4
+        maxzoom=8
+        recenter=true coordinates=null mapId='ember-cli-mapbox.7c3914f2' divId='mapbox' as |map|}}
       {{#each content as |position|}}
-        {{mapbox-marker map=map cluster=cluster coordinates=position.coordinates}}
-      {{/each}}
-      {{/mapbox-markercluster}}
-    {{/mapbox-map}}
+        {{#mapbox-markercluster map=map as |cluster|}}
+           {{#each content as |session|}}
+             {{mapbox-marker
+                 cluster=cluster
+                 map=map
+                 coordinates=session.geo
+                 popup-title=session.name
+               }}
+           {{/each}}
+         {{/mapbox-markercluster}}
+       {{/each}}
+      {{/mapbox-map}}
+    {{/if}}
   </div>
 </div>

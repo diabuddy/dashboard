@@ -7,7 +7,7 @@
       {{#paper-list}}
         {{#each userListItems as |buddy|}}
           {{#paper-item class='item'}}
-            <img src={{buddy.profile_img}} alt={{buddy.name}} class="md-avatar">
+            <img src={{buddy.profile_url}} alt={{buddy.name}} class="md-avatar">
             <div class="md-list-item">
               <div class='primary'>{{buddy.name}}</div>
               <div class='secondary'>{{buddy.email}}</div>
@@ -17,5 +17,5 @@
       {{/paper-list}}
     </div>
   </div>
-  {{map-element}}
+  {{map-element content=filteredGeoItems}}
 </div>
