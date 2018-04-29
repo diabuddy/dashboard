@@ -38,15 +38,15 @@ export default Controller.extend({
             photo: "nick.jpg"
         },
         {
-            name: "Nicholas Lewanowicz",
-            role: "Frontend Developer",
-            linkedIn: "https://www.linkedin.com/in/nicklewanowicz/",
+            name: "Mat Schmid",
+            role: "iOS Developer",
+            linkedIn: "https://www.linkedin.com/in/matschmid/",
             photo: "nick.jpg"
         },
         {
-            name: "Nicholas Lewanowicz",
+            name: "Seena Rowhani",
             role: "Frontend Developer",
-            linkedIn: "https://www.linkedin.com/in/nicklewanowicz/",
+            linkedIn: "https://www.linkedin.com/in/srowhani/",
             photo: "nick.jpg"
         },
         {
