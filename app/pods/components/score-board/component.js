@@ -4,7 +4,7 @@ import { computed } from '@ember/object';
 import faker from 'faker';
 import moment from 'moment';
 
-const rand = i => Math.floor(Math.random() * i) + 1;
+const rand = () => Math.floor(Math.random() * 9) + 1
 
 export default Component.extend({
   tagName: '',
@@ -22,46 +22,46 @@ export default Component.extend({
         label: 'Monday',
         backgroundColor: red,
         data: [
-          rand(5),
-          rand(9),
-          10,
-          rand(9)
+          rand(),
+          rand(),
+          rand(),
+          rand()
         ]
       }, {
         label: 'Tuesday',
         backgroundColor: blue,
         data: [
-          rand(9),
-          rand(9),
-          rand(9),
-          rand(9)
+          rand(),
+          rand(),
+          rand(),
+          rand()
         ]
       }, {
         label: 'Wednesday',
         backgroundColor: green,
         data: [
-          rand(9),
-          rand(9),
-          10,
-          rand(9)
+          rand(),
+          rand(),
+          rand(),
+          rand()
         ]
       }, {
         label: 'Thursday',
         backgroundColor: yellow,
         data: [
-          rand(9),
-          rand(9),
-          10,
-          rand(9)
+          rand(),
+          rand(),
+          rand(),
+          rand()
         ]
       }, {
         label: 'Friday',
         backgroundColor: purple,
         data: [
-          rand(9),
-          rand(9),
-          10,
-          rand(9)
+          rand(),
+          rand(),
+          rand(),
+          rand()
 
         ]
       }]
