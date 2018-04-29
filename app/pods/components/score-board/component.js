@@ -16,7 +16,7 @@ export default Component.extend({
 
 
     return {
-      labels: ['Andy', 'Mat', 'Beck'],
+      labels: ['Avocado', 'Pina', 'Beck'],
       datasets: [{
         label: 'Monday',
         backgroundColor: red,

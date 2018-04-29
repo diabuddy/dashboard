@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model (params) {
+  model(params) {
     const id = params.id;
 
     if (!id) {
@@ -10,8 +10,7 @@ export default Route.extend({
 
     return new Promise((resolve, reject) => {
       return firebase.database()
-        .ref('users')
-        .child(id)
+        .ref('users/' + id)
         .once('value')
         .then(result => result.val())
         .then(response => response !== null ? resolve(response) : (() => {
