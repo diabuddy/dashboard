@@ -7,7 +7,7 @@
         Insulin Chart Plot
         </div>
         <div class='content'>
-            {{insulin-shot-plot class='dashboard-card'}}
+            {{insulin-shot-plot selectedRange=selectedRange class='dashboard-card'}}
         </div>
     </div>
     <div class='chart card card-grey'>
@@ -19,6 +19,7 @@
         </div>
     </div>
 </div>
+{{userData}}
 {{outlet}}
 
 </div>
