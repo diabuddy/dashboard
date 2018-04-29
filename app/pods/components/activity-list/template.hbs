@@ -1,0 +1,18 @@
+{{#paper-list}}
+{{#each data as |event i|}}
+{{#paper-item class=(concat "activity-item " (if (eq (mod i 2) 0) 'grey' 'white'))  }}
+<div class="layout-row layout-align-space-between">
+    {{event.name}}    |
+    {{#if (eq event.name 'calorieUpdate')}}
+    Calories Updated
+    {{else if (eq event.name 'glucoseUpdate')}}
+    Glucose Updated
+    {{else}}
+    Insulin Updated
+    {{/if}}    |
+    {{event.date}}
+</div>
+{{/paper-item}}
+{{/each}}
+{{/paper-list}}
+{{yield}}
