@@ -8,7 +8,7 @@
       height: 100%;
       #mapbox {
         width: 100%;
-        height: 100%;
+        height: calc(100% - 50px);
         .leaflet-bottom {
           display: none;
         }

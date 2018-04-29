@@ -1,14 +1,23 @@
 import Controller from '@ember/controller';
 
-import { computed } from '@ember/object';
+import { observer } from '@ember/object';
 
 import faker from 'faker';
 
 export default Controller.extend({
-  userListItems: computed('model', function () {
+  computeModel: observer('model', function () {
     const model = this.get('model');
-    return Object.keys(model).map(key => Object.assign({
-      profile_img: faker.image.avatar()
-    }, model[key]));
+    const currentUser = firebase.auth().currentUser;
+    const query = `guardians/${btoa(currentUser.email)}/children`
+
+    firebase.database().ref(query).once('value').then(snapshot => snapshot.val())
+      .then(response => {
+        if (response !== null) {
+          const result = Object.keys(model).filter(key => response[key]).map(key => Object.assign({
+            profile_img: faker.image.avatar()
+          }, model[key]))
+          this.set('userListItems', result)
+        }
+      })
   })
 });
