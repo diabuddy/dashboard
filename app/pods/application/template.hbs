@@ -79,7 +79,7 @@
     {{/paper-toolbar}}
 
     {{#paper-dialog-content}}
-        <div class="layout">
+        <div class="layout layout-align-center">
         {{#each team as |dev|}}
         <div class="layout-column layout-align-center-center">
         <div class="bs profile-photo">
@@ -87,6 +87,7 @@
         </div>
         <h4>{{dev.name}}</h4>
         <h5>{{dev.role}}</h5>
+        <a href={{dev.linkedIn}}>LinkedIn</a>
         </div>
         {{/each}}
         </div>
