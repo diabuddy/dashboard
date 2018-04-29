@@ -15,8 +15,23 @@ export default Service.extend({
       ],
       callbacks: {
         signInSuccess: (currentUser, credential, redirectUrl) => {
+          const serializedUserQuery = `guardians/${btoa(currentUser.email)}`;
+          firebase.database().ref(serializedUserQuery).once('value')
+            .then(val => val.val())
+            .then(response => {
+              if (response === null) {
+                firebase.database().ref(serializedUserQuery).set({
+                  name: currentUser.displayName,
+                  email: currentUser.email,
+                  children: {}
+                });
+              }
+            })
+
+
           localStorage['currentUser'] = JSON.stringify(currentUser);
           this.set('currentUser', currentUser)
+
           callback(...arguments);
         }
       }

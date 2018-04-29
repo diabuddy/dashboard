@@ -5,7 +5,10 @@
       <div class='title'>You've been invited to manage {{model.name}}</div>
     </div>
     <div class='body'>
-      {{#paper-button class='sponsor' onClick=(action 'sponsorThisChild' id)}}
+      {{#paper-button class='decline' onClick=(action 'declineThisChild')}}
+        Decline
+      {{/paper-button}}
+      {{#paper-button class='sponsor' onClick=(action 'sponsorThisChild' id model)}}
         Accept
       {{/paper-button}}
     </div>
