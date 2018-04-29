@@ -30,9 +30,8 @@ html, body, body > .ember-view, #application {
 
 //Application CSS
 #application {
-    .navicon {
-        height: 50px;
-        padding-right: 10px;
+    .navlogo {
+      transform: translateY(2px);
     }
     .md-sidenav-left {
         min-width: 15VW;
@@ -53,7 +52,7 @@ html, body, body > .ember-view, #application {
     }
     .outlet-content {
         background: #f4f5f7;
-        
+
     }
 }
 
