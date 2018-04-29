@@ -41,19 +41,19 @@ export default Controller.extend({
             name: "Mat Schmid",
             role: "iOS Developer",
             linkedIn: "https://www.linkedin.com/in/matschmid/",
-            photo: "nick.jpg"
+            photo: "mat.jpg"
         },
         {
             name: "Seena Rowhani",
             role: "Frontend Developer",
             linkedIn: "https://www.linkedin.com/in/srowhani/",
-            photo: "nick.jpg"
+            photo: "seena.jpg"
         },
         {
-            name: "Nicholas Lewanowicz",
+            name: "Yuhan Lee",
             role: "Frontend Developer",
-            linkedIn: "https://www.linkedin.com/in/nicklewanowicz/",
-            photo: "nick.jpg"
+            linkedIn: "https://www.linkedin.com/in/yuhan-lee/",
+            photo: "yuhan.jpg"
         }
     ],
     actions: {
