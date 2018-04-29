@@ -74,7 +74,7 @@ export default Component.extend({
       .map(dataForUser => {
         return dataForUser.map(data => {
           return {
-            x: moment().add(data.timestamp, 'minutes'),
+            x: moment().hours(0).minutes(0).add(data.timestamp, 'minutes'),
             y: data.data,
             name: data.user.name
           }
