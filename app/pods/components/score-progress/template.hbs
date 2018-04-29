@@ -1,0 +1,8 @@
+{{#each data as |user|}}
+<div class="layout-column layout-align-center-center bs score-progress">
+<span class="layout-row layout-align-center-center">{{user.name}}</span>
+<h2>{{div user.score 500}}%</h2>
+</div>
+{{/each}}
+
+{{yield}}
