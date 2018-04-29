@@ -16,8 +16,6 @@ export default Component.extend({
           },
           type: 'time',
           time: {
-            min: moment().hours(11).minutes(0).seconds(0),
-            max: moment().hours(24).minutes(0).seconds(0),
             displayFormats: {
               hour: 'h:mm a'
             }
