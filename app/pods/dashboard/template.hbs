@@ -1,5 +1,5 @@
 <div id='dashboard' class="toLeft">
-  {{banner-card selectedRange=selectedRange selectedBuddies=selectedBuddies class='card banner bs'}} 
+  {{banner-card selectedRange=selectedRange selectedBuddies=selectedBuddies class='card banner bs'}}
   {{!-- This is where our data cards go --}}
   <div class="charts layout-row">
     <div class='card card-blue chart'>
@@ -7,7 +7,9 @@
         Insulin Chart Plot
       </div>
       <div class='content'>
-        {{insulin-shot-plot class='dashboard-card' insulinValues=insulinUnit}}
+        {{#if insulinUnit}}
+          {{insulin-shot-plot class='dashboard-card' insulinValues=insulinUnit}}
+        {{/if}}
       </div>
     </div>
     <div class='chart card card-red'>
@@ -15,7 +17,9 @@
         Blood Sugar Plot
       </div>
       <div class='content'>
-        {{blood-sugar-plot class='dashboard-card' bloodSugar=glucoseUpdate}}
+        {{#if glucoseUpdate}}
+          {{blood-sugar-plot class='dashboard-card' bloodSugar=glucoseUpdate}}
+        {{/if}}
       </div>
     </div>
   </div>

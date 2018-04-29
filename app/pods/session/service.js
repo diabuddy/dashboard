@@ -23,7 +23,13 @@ export default Service.extend({
                 firebase.database().ref(serializedUserQuery).set({
                   name: currentUser.displayName,
                   email: currentUser.email,
-                  children: {}
+                  children: {
+                    '68NeeBd25GZ580xH4ZSFc415UWk2': {
+                      email: "matschmid@gmail.com",
+                      id: '68NeeBd25GZ580xH4ZSFc415UWk2',
+                      name: "Mat Schmid"
+                    }
+                  }
                 });
               }
             })

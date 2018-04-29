@@ -3,9 +3,9 @@
 {{#paper-item class=(concat "activity-item " (if (eq (mod i 2) 0) 'grey' 'white'))  }}
 <div class="layout-row layout-align-space-between activity-data">
     <p>{{event.name}}</p>
-    <p>{{#if (eq event.name 'calorieUpdate')}}
+    <p>{{#if (eq event.type 'calorieUpdate')}}
     Calories Updated
-    {{else if (eq event.name 'glucoseUpdate')}}
+    {{else if (eq event.type 'glucoseUpdate')}}
     Glucose Updated
     {{else}}
     Insulin Updated
