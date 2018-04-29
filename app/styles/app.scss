@@ -75,6 +75,9 @@ html, body, body > .ember-view, #application {
             margin: 0px;
         }
     }
+    .blood-sugar {
+        height: 100%;
+    }
     .charts {
         margin-left: 0.2rem;
     }
@@ -84,6 +87,8 @@ html, body, body > .ember-view, #application {
         }
     }
     .content {
+        height: 30VH;
+        max-height: 30VH;
     }
 }
 #insulin-shot-plot {
