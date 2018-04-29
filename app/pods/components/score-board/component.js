@@ -4,9 +4,11 @@ import { computed } from '@ember/object';
 import faker from 'faker';
 import moment from 'moment';
 
+const rand = () => Math.floor(Math.random() * 6) * 1;
+
 export default Component.extend({
   tagName: '',
-  chartData: computed( function() {
+  chartData: computed(function () {
     var red = '#E24570';
     var blue = '#328FE6';
     var green = '#4CB5B3';
@@ -15,16 +17,15 @@ export default Component.extend({
 
 
     return {
-      labels: ['Seena', 'Mat', 'Yuhan', 'Nic'],
+      labels: ['Andy', 'Mat', 'Beck'],
       datasets: [{
         label: 'Monday',
         backgroundColor: red,
         data: [
-          faker.random.number(1, 5),
-          faker.random.number(1, 9),
+          Math.floor(Math.random() * 6) + 1,
+          rand(),
           10,
-          faker.random.number(1, 9)
-        ]
+          rand()]
       }, {
         label: 'Tuesday',
         backgroundColor: blue,
@@ -32,8 +33,7 @@ export default Component.extend({
           faker.random.number(1, 9),
           faker.random.number(1, 9),
           faker.random.number(1, 9),
-          faker.random.number(1, 9)
-        ]
+          rand()]
       }, {
         label: 'Wednesday',
         backgroundColor: green,
@@ -41,8 +41,7 @@ export default Component.extend({
           faker.random.number(1, 9),
           faker.random.number(1, 9),
           10,
-          faker.random.number(1, 9)
-        ]
+          rand()]
       }, {
         label: 'Thursday',
         backgroundColor: yellow,
@@ -50,8 +49,7 @@ export default Component.extend({
           faker.random.number(1, 9),
           faker.random.number(1, 9),
           10,
-          faker.random.number(1, 9)
-        ]
+          rand()]
       }, {
         label: 'Friday',
         backgroundColor: purple,
@@ -59,8 +57,7 @@ export default Component.extend({
           faker.random.number(1, 9),
           faker.random.number(1, 9),
           10,
-          faker.random.number(1, 9)
-
+          rand()
         ]
       }]
     }
