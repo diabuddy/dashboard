@@ -88,6 +88,9 @@ html, body, body > .ember-view, #application {
     width: 100%;
     height: 100VH;
     overflow-y: auto;
+    .activity-data{
+        width: 100%;
+    }
     .activity-item{
         height: 5px;
     }
