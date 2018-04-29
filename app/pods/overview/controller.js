@@ -12,6 +12,7 @@ export default Controller.extend({
       .then(response => {
         if (response !== null) {
           const result = Object.keys(model).filter(key => response[key]).map(key => Object.assign({
+            profile_url: 'assets/images/avatar.png'
           }, model[key]))
           this.set('userListItems', result)
           this.set('filteredGeoItems', result.filter(item => item.geo));

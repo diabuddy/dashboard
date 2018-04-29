@@ -6,8 +6,22 @@ export default Controller.extend({
     label: "24 Hours",
     value: 24
   },
-  mockUsers: ['3Nwq2LuIs9QaVxzEo57szgBC7ME2', '68NeeBd25GZ580xH4ZSFc415UWk2', 'E4HHocNr7yTwBBbPpdOWX6YyVH12'],
-  userActivity: computed( 'model', function() {
+  mockUsers: [],
+  insulinUnit: [],
+  glucoseUpdate: [],
+  calorieUpdate: [],
+  modelObserver: observer('model', function () {
+    const currentUser = firebase.auth().currentUser;
+    const query = `guardians/${btoa(currentUser.email)}/children`
+
+    firebase.database().ref(query).once('value').then(snapshot => snapshot.val())
+      .then(response => {
+        if (response !== null) {
+          this.set('mockUsers', Object.keys(response));
+        }
+      })
+  }),
+  userActivity: computed('mockUsers', function() {
     const model = this.get('model');
     const buddies = this.get('mockUsers')
     let data = []
@@ -32,10 +46,9 @@ export default Controller.extend({
         }
     }
     events.sort(function(a,b) {return (a.date < b.date) ? 1 : ((b.date < a.date) ? -1 : 0);} );
-    console.log(events)
     return events
   }),
-  userScores: computed( 'model', function() {
+  userScores: computed('mockUsers', function() {
     const model = this.get('model');
     const buddies = this.get('mockUsers')
     let data = []
@@ -63,7 +76,7 @@ export default Controller.extend({
     console.log(scores)
     return scores
   }),
-  dataChange: observer('model', function () {
+  dataChange: observer('mockUsers', function () {
     const model = this.get('model');
     const buddies = this.get('mockUsers')
     let data = []
@@ -98,6 +111,7 @@ export default Controller.extend({
         calorieUpdate.push(el[i])
       }
     }
+
     this.setProperties({ insulinUnit, glucoseUpdate, calorieUpdate })
     this.set("allPoints", el);
     return el

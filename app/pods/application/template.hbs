@@ -39,13 +39,13 @@
             {{#paper-content padding=true}}
             {{#paper-list}}
             {{#paper-item class='user-info'}}
-              <img class='md-avatar' src="assets/avatar.png"/>
+              <img class='md-avatar' src="assets/images/avatar.png"/>
               {{session.currentUser.displayName}}
             {{/paper-item}}
             {{#link-to "overview"}} {{#paper-item}}Overview{{/paper-item}}{{/link-to}}
             {{#link-to "dashboard"}} {{#paper-item}}Dashboard{{/paper-item}}{{/link-to}}
             {{#paper-item target="_blank" href='https://nicholaslewanowicz.typeform.com/to/oIOojW'}}iOS Beta! <div class="chip chip--primary">New!</div>{{/paper-item}}
-            
+
             {{!-- {{#paper-item onClick=(action "toggleExpandedItem" "expandBuds")}}Buddies{{/paper-item}}
                 <div class="subitems">
                 {{#if expandBuds}}
@@ -85,7 +85,7 @@
         {{#each team as |dev|}}
         <div class="layout-column layout-align-center-center">
         <div class="bs profile-photo">
-            <img alt={{dev.name}} src={{concat "/assets/" dev.photo}}/>
+            <img alt={{dev.name}} src={{concat "/assets/images" dev.photo}}/>
         </div>
         <h4>{{dev.name}}</h4>
         <h5>{{dev.role}}</h5>
@@ -94,7 +94,7 @@
         {{/each}}
         </div>
         <p class="description">
-          This project was concieved, designed, and implemented at the `HackingHealth Hackathon`. After an intense 36 hours of work we are left with a surprisingly polished and functional iOS and web app. If you have any questions feel free to reach out to us on our linkedIn or through the emails on github. 
+          This project was concieved, designed, and implemented at the `HackingHealth Hackathon`. After an intense 36 hours of work we are left with a surprisingly polished and functional iOS and web app. If you have any questions feel free to reach out to us on our linkedIn or through the emails on github.
         </p>
     {{/paper-dialog-content}}
 

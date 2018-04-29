@@ -40,7 +40,7 @@ export default Component.extend({
       }
     }
   }),
-  scatterChartData: computed(function () {
+  scatterChartData: computed('bloodSugar', function () {
     const bloodSugar = this.get('bloodSugar');
     var red = '#E24570';
     var blue = '#328FE6';
