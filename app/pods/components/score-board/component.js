@@ -1,7 +1,6 @@
 
 import Component from '@ember/component';
 import { computed } from '@ember/object';
-import faker from 'faker';
 import moment from 'moment';
 
 const rand = () => Math.floor(Math.random() * 9) + 1
