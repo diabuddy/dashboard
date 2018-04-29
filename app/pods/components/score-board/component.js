@@ -6,7 +6,7 @@ import moment from 'moment';
 
 export default Component.extend({
   tagName: '',
-  didInsertElement() {
+  chartData: computed( function() {
     var red = '#E24570';
     var blue = '#328FE6';
     var green = '#4CB5B3';
@@ -14,7 +14,7 @@ export default Component.extend({
     var purple = '#8647FC';
 
 
-    var barChartData = {
+    return {
       labels: ['Seena', 'Mat', 'Yuhan', 'Nic'],
       datasets: [{
         label: 'Monday',
@@ -63,31 +63,27 @@ export default Component.extend({
 
         ]
       }]
-    };
-    var ctx = document.getElementById('score-board-plot').getContext('2d');
-    window.myBar = Chart.Bar(ctx, {
-      data: barChartData,
-      options: {
-        scales: {
-          xAxes: [{
-            stacked: true,
-            scaleLabel: {
-              display: true
-            }
-          }],
-          yAxes: [{
-            stacked: true,
-            scaleLabel: {
-              display: true,
-              labelString: 'points'
-            },
-            ticks: {
-              min: 0
-            }
-          }]
+    }
+  }),
+  options: {
+    scales: {
+      xAxes: [{
+        stacked: true,
+        scaleLabel: {
+          display: true
+        }
+      }],
+      yAxes: [{
+        stacked: true,
+        scaleLabel: {
+          display: true,
+          labelString: 'points'
         },
-        showLines: false,
-      }
-    });
+        ticks: {
+          min: 0
+        }
+      }]
+    },
+    showLines: false,
   }
 });

@@ -7,6 +7,7 @@ export default Controller.extend({
     sidenav: false,
     lockedSidenav: true,
     expandBuds: false,
+    aboutModal: false,
     items: [
       {
         title: 'Logout',
@@ -28,6 +29,32 @@ export default Controller.extend({
             name: "Calvin",
             uid:"3"
         },
+    ],
+    team: [
+        {
+            name: "Nicholas Lewanowicz",
+            role: "Frontend Developer",
+            linkedIn: "https://www.linkedin.com/in/nicklewanowicz/",
+            photo: "nick.jpg"
+        },
+        {
+            name: "Nicholas Lewanowicz",
+            role: "Frontend Developer",
+            linkedIn: "https://www.linkedin.com/in/nicklewanowicz/",
+            photo: "nick.jpg"
+        },
+        {
+            name: "Nicholas Lewanowicz",
+            role: "Frontend Developer",
+            linkedIn: "https://www.linkedin.com/in/nicklewanowicz/",
+            photo: "nick.jpg"
+        },
+        {
+            name: "Nicholas Lewanowicz",
+            role: "Frontend Developer",
+            linkedIn: "https://www.linkedin.com/in/nicklewanowicz/",
+            photo: "nick.jpg"
+        }
     ],
     actions: {
         toggleSidenav () {
@@ -54,6 +81,9 @@ export default Controller.extend({
         },
         logout () {
           this.get('session').logout()
+        },
+        toggleAboutUs () {
+            this.toggleProperty('aboutModal')
         }
     }
 });

@@ -11,11 +11,11 @@ html, body, body > .ember-view, #application {
 }
 
 .bs {
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,.20);
 }
 
 .bs:hover {
-    box-shadow: 0 3px 3px rgba(0,0,0,.05);
+    box-shadow: 0 3px 3px rgba(0,0,0,.20);
 }
 
 .subitems {
@@ -25,7 +25,32 @@ html, body, body > .ember-view, #application {
 .liquid-outlet {
     width: 100%;
 }
-
+.description {
+    padding-top: 2rem;
+    font-weight: 500;
+}
+.profile-photo {
+    position: relative;
+    margin: 2rem;
+    width: 20VH;
+    border: 5px solid #FFFFFF;
+    border-radius: 20VH;
+    padding: 0.2rem;
+    background-color: whitesmoke;
+    &:after {
+      border-radius: 20VH;
+      box-shadow: 0 5px 8px 0 rgba(0,0,0,1) inset;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20VH;
+    }
+    img {
+      border-radius: 20VH;
+      width: 100%;
+    }
+  }
 
 
 //Application CSS
@@ -75,7 +100,7 @@ html, body, body > .ember-view, #application {
             margin: 0px;
         }
     }
-    .blood-sugar {
+    .scatter-plot {
         height: 100%;
     }
     .charts {
