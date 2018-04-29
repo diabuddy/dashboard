@@ -7,12 +7,18 @@ import moment from 'moment';
 export default Component.extend({
   tagName: '',
   didInsertElement() {
+    var colorPoint = faker.commerce.color();
+    var colorPoint2 = faker.commerce.color();
+    var dotBorder = '#000000';
 
     var scatterChartData = {
       datasets: [{
         pointStyle: 'circle',
         pointRadius: 6,
         pointHoverRadius: 8,
+        pointBorderColor: dotBorder,
+        pointBackgroundColor: colorPoint,
+        backgroundColor: colorPoint,
         label: 'Piggy',
         borderColor: faker.commerce.color(),
         data: [{
@@ -32,6 +38,9 @@ export default Component.extend({
         pointStyle: 'circle',
         pointRadius: 6,
         pointHoverRadius: 8,
+        pointBorderColor: dotBorder,
+        pointBackgroundColor: colorPoint2,
+        backgroundColor: colorPoint2,
         label: 'Mary',
         borderColor: faker.commerce.color(),
         data: [{

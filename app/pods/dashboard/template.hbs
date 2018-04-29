@@ -1,25 +1,35 @@
 <div id='dashboard' class="toLeft">
-{{banner-card selectedRange=selectedRange class='card banner bs'}}
-{{!-- This is where our data cards go --}}
-<div class="charts layout-row">
+  {{banner-card selectedRange=selectedRange class='card banner bs'}} {{!-- This is where our data cards go --}}
+  <div class="charts layout-row">
     <div class='card card-blue chart'>
-        <div class='header'>
+      <div class='header'>
         Insulin Chart Plot
-        </div>
-        <div class='content'>
-            {{insulin-shot-plot selectedRange=selectedRange class='dashboard-card'}}
-        </div>
+      </div>
+      <div class='content'>
+        {{insulin-shot-plot class='dashboard-card'}}
+      </div>
     </div>
-    <div class='chart card card-grey'>
-        <div class='header'>
+    <div class='chart card card-red'>
+      <div class='header'>
         Blood Sugar Plot
-        </div>
-        <div class='content'>
-            {{blood-sugar-plot class='dashboard-card'}}
-        </div>
+      </div>
+      <div class='content'>
+        {{blood-sugar-plot class='dashboard-card'}}
+      </div>
     </div>
-</div>
-{{userData}}
-{{outlet}}
+  </div>
+
+  <div class="charts layout-row">
+    <div class='chart card card-orange'>
+      <div class='header'>
+        Reward Board
+      </div>
+      <div class='content'>
+        {{score-board class='dashboard-card'}}
+      </div>
+    </div>
+  </div>
+
+  {{outlet}}
 
 </div>
